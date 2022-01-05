@@ -1,0 +1,74 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+nav {
+  height: 10vh;
+  background-color: salmon;
+  box-shadow: 0 0.5rem 0.8rem 0 #cac8c8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.2rem;
+  width: 50%;
+  margin-left: auto;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Media query----------------- */
+@media only screen and (max-width: 768px) {
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+  }
+  .nav-links {
+    position: fixed;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: blueviolet;
+    clip-path: circle(100px at -50% 0%);
+    -webkit-clip-path: circle(100px at -50% 0%);
+    transition: all 1s ease-in-out;
+  }
+  .nav-links.open {
+    clip-path: circle(100px at 0% 0%);
+    -webkit-clip-path: circle(500px at 0% 0%);
+  }
+  .nav-links li {
+    position: relative;
+    top: -50px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .burger-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    transform: translate(-5% 50%);
+    margin-left: 1.5rem;
+    z-index: 2;
+  }
+}

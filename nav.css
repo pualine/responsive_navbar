@@ -1,0 +1,76 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  background-color: rgb(241, 241, 241);
+}
+
+/* Navigation Menu */
+/* .nav__container {
+  width: 90%;
+  margin: 0 auto;
+} */
+span {
+  color: rgb(253, 169, 169);
+  font-size: 1.5rem;
+  margin-left: 3rem;
+}
+.nav__items {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(112, 107, 117);
+  height: 10vh;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+.navigation__menu {
+  margin-right: 1.5rem;
+}
+.navigation__menu li {
+  display: inline-block;
+  list-style: none;
+  margin: 1.5rem;
+}
+.navigation__menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* .nav__items .humburgger__icon {
+  display: none;
+} */
+
+/* navBar Media Query */
+@media only screen and (max-width: 768px) {
+  .navigation__menu {
+    position: relative;
+    /* top: 0; */
+    /* right: 0; */
+  }
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+  }
+  .navigation__menu {
+    position: fixed;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+
+    /* background-color: blue; */
+  }
+}
